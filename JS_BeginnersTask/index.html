@@ -1,112 +1,69 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>JavaScript Lab Tasks</title>
-    <style>
-        body {
-            font-family: Arial;
-            text-align: center;
-        }
-
-        button {
-            margin: 10px;
-            padding: 10px;
-        }
-
-        #text {
-            margin: 20px;
-            font-size: 18px;
-        }
-    </style>
+<title>WT Lab 1</title>
 </head>
+
 <body>
 
-<h1>JavaScript Beginner Tasks</h1>
+<h1>Welcome to Web-Technologies Lab-1</h1>
 
-<p id="text">Hello World</p>
+<h1 id="hello">LAB_01</h1>
 
-<button onclick="changeText()">Change Text</button>
-<button onclick="changeStyle()">Change Style</button>
-<button onclick="showMessage()">Click Me</button>
-<button onclick="getName()">Enter Name</button>
+<button onclick="changeText()">Click-Me!</button>
+<button onclick="addText()">Add-Content</button>
+<button onclick="removeText()">Remove-Content</button>
+<button onclick="changeStyle()">Change-Style</button>
+<button id="button5" onclick="toggleStyle()">Toggle-Button</button>
+
+<h1 id="title">Hello JavaScript Styling</h1>
+<button onclick="changingStyle()">Change Style</button>
+<button onclick="togglingStyle()">Toggle Style</button>
+
+<p id="para">This is para</p>
+
+<h2 id="text">Hover over me!</h2>
+<button onclick="buttonClicked()">Click Me</button>
+
+<div id="box"
+onmouseover="mouseOver()"
+onmouseout="mouseOut()"
+style="width:200px; height:100px; background-color:lightblue;">
+Hover Box
+</div>
+
+<form onsubmit="formSubmit(event)">
+<input type="text" placeholder="Enter name" required>
+<button type="submit">Submit</button>
+</form>
+
+<h2 id="greeting"></h2>
+
+<form onsubmit="validateForm(event)">
+<label>Name:
+<input type="text" id="name">
+</label>
+
+<label>Email:
+<input type="text" id="email">
+</label>
+
+<button type="submit">Submit</button>
+</form>
+
 <button onclick="printPage()">Print Page</button>
 
-<script>
+<audio src="Vennilavu Saaral.mp3" controls></audio>
 
-//////////////////////
-// Task 1: Variables
-//////////////////////
-var name = "Student";
-let age = 20;
-const country = "India";
+<video width="700" height="400" controls>
+<source src="sahana-rajasab.mp4" type="video/mp4">
+</video>
 
-console.log(name, age, country);
+<iframe width="560" height="315"
+src="https://www.youtube-nocookie.com/embed/M7lc1UVf-VE">
+</iframe>
 
-//////////////////////
-// Task 2: Functions
-//////////////////////
-function add(a, b) {
-    return a + b;
-}
-
-const subtract = (a, b) => a - b;
-
-console.log("Addition:", add(5,3));
-console.log("Subtraction:", subtract(5,3));
-
-//////////////////////
-// Task 3: Built-in Functions
-//////////////////////
-alert("Welcome to JavaScript Lab");
-
-let userInput = prompt("Enter something:");
-console.log("User Input:", userInput);
-
-//////////////////////
-// Task 4: HTML Manipulation
-//////////////////////
-function changeText() {
-    document.getElementById("text").innerHTML = "Text Changed!";
-}
-
-//////////////////////
-// Task 5: Styling
-//////////////////////
-function changeStyle() {
-    let element = document.getElementById("text");
-    element.style.color = "red";
-    element.style.backgroundColor = "yellow";
-    element.style.fontSize = "22px";
-}
-
-//////////////////////
-// Task 6: Events
-//////////////////////
-function showMessage() {
-    console.log("Button Clicked!");
-}
-
-document.getElementById("text").onmouseover = function() {
-    this.style.color = "blue";
-};
-
-document.getElementById("text").onmouseout = function() {
-    this.style.color = "black";
-};
-
-//////////////////////
-// Task 7: Interactive
-//////////////////////
-function getName() {
-    let userName = prompt("Enter your name:");
-    alert("Hello " + userName);
-}
-
-function printPage() {
-    window.print();
-}
-
-</script>
+<script src="index.js"></script>
 
 </body>
 </html>
