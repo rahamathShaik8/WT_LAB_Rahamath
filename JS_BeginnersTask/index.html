@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Lab Tasks</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px;
+        }
+
+        #text {
+            margin: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>JavaScript Beginner Tasks</h1>
+
+<p id="text">Hello World</p>
+
+<button onclick="changeText()">Change Text</button>
+<button onclick="changeStyle()">Change Style</button>
+<button onclick="showMessage()">Click Me</button>
+<button onclick="getName()">Enter Name</button>
+<button onclick="printPage()">Print Page</button>
+
+<script>
+
+//////////////////////
+// Task 1: Variables
+//////////////////////
+var name = "Student";
+let age = 20;
+const country = "India";
+
+console.log(name, age, country);
+
+//////////////////////
+// Task 2: Functions
+//////////////////////
+function add(a, b) {
+    return a + b;
+}
+
+const subtract = (a, b) => a - b;
+
+console.log("Addition:", add(5,3));
+console.log("Subtraction:", subtract(5,3));
+
+//////////////////////
+// Task 3: Built-in Functions
+//////////////////////
+alert("Welcome to JavaScript Lab");
+
+let userInput = prompt("Enter something:");
+console.log("User Input:", userInput);
+
+//////////////////////
+// Task 4: HTML Manipulation
+//////////////////////
+function changeText() {
+    document.getElementById("text").innerHTML = "Text Changed!";
+}
+
+//////////////////////
+// Task 5: Styling
+//////////////////////
+function changeStyle() {
+    let element = document.getElementById("text");
+    element.style.color = "red";
+    element.style.backgroundColor = "yellow";
+    element.style.fontSize = "22px";
+}
+
+//////////////////////
+// Task 6: Events
+//////////////////////
+function showMessage() {
+    console.log("Button Clicked!");
+}
+
+document.getElementById("text").onmouseover = function() {
+    this.style.color = "blue";
+};
+
+document.getElementById("text").onmouseout = function() {
+    this.style.color = "black";
+};
+
+//////////////////////
+// Task 7: Interactive
+//////////////////////
+function getName() {
+    let userName = prompt("Enter your name:");
+    alert("Hello " + userName);
+}
+
+function printPage() {
+    window.print();
+}
+
+</script>
+
+</body>
+</html>
