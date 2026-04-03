@@ -1,86 +1,114 @@
-function changeText(){
-document.getElementById("hello").innerText = "JavaScript Changed This";
+// ================= TASK 1 =================
+// Variables
+var company = "My Startup";
+let year = 2026;
+const founder = "Rahamath";
+
+console.log("Company:", company);
+console.log("Year:", year);
+console.log("Founder:", founder);
+
+// ================= TASK 2 =================
+// Normal Function
+function add(a, b) {
+  return a + b;
 }
 
-function addText(){
-document.getElementById("para").innerText += " Added Text";
+// Arrow Function
+const subtract = (a, b) => a - b;
+
+console.log("Addition:", add(5, 3));
+console.log("Subtraction:", subtract(10, 4));
+
+// ================= TASK 3 =================
+// Built-in functions
+alert("Welcome to our Startup Website!");
+
+let userName = prompt("Enter your name:");
+console.log("User Name:", userName);
+
+// ================= TASK 4 =================
+// HTML Manipulation
+const para = document.getElementById("para");
+
+document.getElementById("changeBtn").addEventListener("click", () => {
+  para.textContent = "Text has been changed!";
+});
+
+document.getElementById("addBtn").addEventListener("click", () => {
+  para.textContent += " + Extra content added";
+});
+
+document.getElementById("removeBtn").addEventListener("click", () => {
+  para.textContent = "";
+});
+
+// ================= TASK 5 =================
+// Styling
+const styleText = document.getElementById("styleText");
+
+document.getElementById("styleBtn").addEventListener("click", () => {
+  styleText.style.color = "white";
+  styleText.style.backgroundColor = "green";
+  styleText.style.fontSize = "30px";
+});
+
+// Toggle Style
+let toggle = false;
+
+document.getElementById("toggleBtn").addEventListener("click", () => {
+  if (!toggle) {
+    styleText.style.color = "black";
+    styleText.style.backgroundColor = "yellow";
+  } else {
+    styleText.style.color = "white";
+    styleText.style.backgroundColor = "green";
+  }
+  toggle = !toggle;
+});
+
+// ================= TASK 6 =================
+// Events
+const box = document.getElementById("box");
+
+box.addEventListener("mouseover", () => {
+  box.style.backgroundColor = "orange";
+});
+
+box.addEventListener("mouseout", () => {
+  box.style.backgroundColor = "lightblue";
+});
+
+// Form submit event
+document.getElementById("form").addEventListener("submit", (e) => {
+  e.preventDefault();
+  console.log("Form Submitted");
+});
+
+// ================= TASK 7 =================
+// Interactive Webpage
+
+// Greeting
+if (userName) {
+  document.getElementById("greet").textContent =
+    "Hello " + userName + ", welcome to our website!";
 }
 
-function removeText(){
-document.getElementById("para").innerText = "";
-}
+// Form validation
+document.getElementById("form").addEventListener("submit", (e) => {
+  e.preventDefault();
 
-function changeStyle(){
-let x = document.getElementById("title");
-x.style.color = "blue";
-x.style.backgroundColor = "lightgray";
-}
+  let name = document.getElementById("name").value.trim();
+  let email = document.getElementById("email").value.trim();
 
-let flag = false;
-function toggleStyle(){
-let b = document.getElementById("button5");
+  if (name === "" || email === "") {
+    alert("Please fill all fields!");
+  } else {
+    alert("Form submitted successfully!");
+  }
+});
 
-if(flag == false){
-b.style.color = "white";
-b.style.backgroundColor = "black";
-flag = true;
-}
-else{
-b.style.color = "black";
-b.style.backgroundColor = "lightblue";
-flag = false;
-}
-}
-
-function changingStyle(){
-document.getElementById("title").style.fontSize = "40px";
-}
-
-let t = true;
-function togglingStyle(){
-let a = document.getElementById("title");
-
-if(t){
-a.style.fontSize = "20px";
-t = false;
-}
-else{
-a.style.fontSize = "35px";
-t = true;
-}
-}
-
-function buttonClicked(){
-document.getElementById("text").innerText = "Button Clicked";
-}
-
-function mouseOver(){
-document.getElementById("box").style.backgroundColor = "orange";
-}
-
-function mouseOut(){
-document.getElementById("box").style.backgroundColor = "lightblue";
-}
-
-function formSubmit(e){
-e.preventDefault();
-document.getElementById("greeting").innerText = "Form Submitted";
-}
-
-function validateForm(e){
-e.preventDefault();
-
-let n = document.getElementById("name").value;
-let em = document.getElementById("email").value;
-
-if(n == "" || em == ""){
-alert("Fill all fields");
-}
-else{
-alert("Submitted Successfully");
-}
-}
-
-function printPage(){
-window.print();
-}
+// Print Page
+document.getElementById("printBtn").addEventListener("click", () => {
+  window.print();
+});
