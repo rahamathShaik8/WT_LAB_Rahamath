@@ -33,6 +33,7 @@
       Hover Box
     </div>
 
+    <!-- Form 1 -->
     <form onsubmit="formSubmit(event)">
       <input type="text" placeholder="Enter name" required />
       <button type="submit">Submit</button>
@@ -40,6 +41,7 @@
 
     <h2 id="greeting"></h2>
 
+    <!-- Form 2 -->
     <form onsubmit="validateForm(event)">
       <label
         >Name:
@@ -56,22 +58,29 @@
 
     <button onclick="printPage()">Print Page</button>
 
-    <audio
-      src="https://file-examples.com/storage/fe0b4e468569cfcdf9d62a0/2017/11/file_example_MP3_700KB.mp3"
-      controls
-    ></audio>
+    <!-- Audio -->
+    <audio controls>
+      <source
+        src="https://www.w3schools.com/html/horse.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
 
+    <!-- Video -->
     <video width="700" height="400" controls>
       <source
-        src="https://file-examples.com/storage/fe0b4e468569cfcdf9d62a0/2017/04/file_example_MP4_480_1_5MG.mp4"
+        src="https://www.w3schools.com/html/mov_bbb.mp4"
         type="video/mp4"
       />
     </video>
 
+    <!-- YouTube -->
     <iframe
       width="560"
       height="315"
-      src="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.youtube.com/watch%3Fv%3Dlfmg-EJ8gm4&ved=2ahUKEwja0dCf9tGTAxXZSWwGHRZ7CJEQkPEHegQIFxAB&usg=AOvVaw1B2yR4LAWXtqLBYnaydwJM"
+      src="https://www.youtube.com/embed/lfmg-EJ8gm4"
+      frameborder="0"
+      allowfullscreen
     >
     </iframe>
 
