@@ -2,43 +2,48 @@
 <html>
   <head>
     <title>Startup Demo Website</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <h1>My Startup Website 🚀</h1>
+    <header>
+      <h1>My Startup Website</h1>
+      <h2 id="mainText">Welcome User</h2>
+    </header>
 
-    <h2 id="mainText">Welcome User</h2>
+    <section>
+      <h3>Content Manipulation</h3>
+      <p id="para">This is initial content</p>
+      <button id="changeBtn">Change Text</button>
+      <button id="addBtn">Add Text</button>
+      <button id="removeBtn">Remove Text</button>
+    </section>
 
-    <!-- Task 4 -->
-    <p id="para">This is initial content</p>
-    <button id="changeBtn">Change Text</button>
-    <button id="addBtn">Add Text</button>
-    <button id="removeBtn">Remove Text</button>
+    <section>
+      <h3 id="styleText">Styling Example</h3>
+      <button id="styleBtn">Apply Style</button>
+      <button id="toggleBtn">Toggle Style</button>
+    </section>
 
-    <!-- Task 5 -->
-    <h2 id="styleText">Styling Example</h2>
-    <button id="styleBtn">Apply Style</button>
-    <button id="toggleBtn">Toggle Style</button>
+    <section>
+      <h3>Mouse Events</h3>
+      <div id="box">Hover over this box</div>
+    </section>
 
-    <!-- Task 6 -->
-    <div
-      id="box"
-      style="width: 200px; height: 100px; background-color: lightblue"
-    >
-      Hover Me
-    </div>
+    <section>
+      <h3>User Form</h3>
+      <form id="form">
+        <input type="text" id="name" placeholder="Enter Name" />
+        <input type="text" id="email" placeholder="Enter Email" />
+        <button type="submit">Submit</button>
+      </form>
 
-    <!-- Task 7 -->
-    <form id="form">
-      <input type="text" id="name" placeholder="Enter Name" />
-      <input type="text" id="email" placeholder="Enter Email" />
-      <button type="submit">Submit</button>
-    </form>
+      <p id="greet"></p>
+    </section>
 
-    <h3 id="greet"></h3>
-
-    <!-- Print -->
-    <button id="printBtn">Print Page</button>
+    <section>
+      <button id="printBtn">Print Page</button>
+    </section>
 
     <script src="index.js"></script>
   </body>
